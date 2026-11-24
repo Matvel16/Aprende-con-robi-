@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fredoka", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-papel: #F9FBFC;
+  --color-cuadricula: #E5EDF5;
+  --color-tinta: #16243B;
+  --color-tinta-suave: #4B5B75;
+  --color-carton: #DFC39D;
+  --color-carton-borde: #B99768;
+  --color-boligrafo: #1D5FD6;
+  --color-boligrafo-oscuro: #1649A8;
+  --color-estrella: #EAB308;
+  --color-ladrillo: #D95F2B;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    color: var(--color-tinta);
+    background-color: var(--color-papel);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: var(--color-papel);
+    background-image:
+      linear-gradient(to right, var(--color-cuadricula) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-cuadricula) 1px, transparent 1px);
+    background-size: 24px 24px;
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  button,
+  a,
+  input,
+  select {
+    &:focus-visible {
+      outline: 3px solid var(--color-boligrafo);
+      outline-offset: 2px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

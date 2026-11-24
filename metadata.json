@@ -1,0 +1,6 @@
+{
+  "name": "Misión Robi",
+  "description": "Aprende a programar paso a paso guiando al robot Robi hasta la estrella.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
